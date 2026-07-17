@@ -20,19 +20,48 @@ import ApartmentIcon from "@mui/icons-material/Apartment";
 import PersonIcon from "@mui/icons-material/Person";
 import SettingsIcon from "@mui/icons-material/Settings";
 import BusinessIcon from "@mui/icons-material/Business";
+import { useSelector } from "react-redux";
 
 const menuItems = [
-  { text: "Dashboard", icon: <DashboardIcon />, path: "/" },
-  { text: "Employees", icon: <GroupsIcon />, path: "/employee" },
-  { text: "Departments", icon: <ApartmentIcon />, path: "/departments" },
-  { text: "Profile", icon: <PersonIcon />, path: "/profile" },
-  { text: "Settings", icon: <SettingsIcon />, path: "/settings" },
-];
+  {
+    text: "Dashboard",
+    icon: <DashboardIcon />,
+    path: "/",
+    roles: ["Admin", "Manager", "Employee"],
+  },
+  {
+    text: "Employees",
+    icon: <GroupsIcon />,
+    path: "/employee",
+    roles: ["Admin", "Manager"],
+  },
+  {
+    text: "Departments",
+    icon: <ApartmentIcon />,
+    path: "/departments",
+    roles: ["Admin"],
+  },
+  {
+    text: "Profile",
+    icon: <PersonIcon />,
+    path: "/profile",
+    roles: ["Admin", "Manager", "Employee"],
+  },
+  {
+    text: "Settings",
+    icon: <SettingsIcon />,
+    path: "/settings",
+    roles: ["Admin"],
+  },
+];  
 
-export default function TemporaryDrawer({ darkMode }) {
+function TemporaryDrawer({ darkMode }) {
   const [open, setOpen] = React.useState(false);
-
   const isMobile = useMediaQuery("(max-width:600px)");
+  
+ const role = useSelector(
+    (state) => state.auth.user.role
+  );
 
   const toggleDrawer = () => {
     setOpen((prev) => !prev);
@@ -42,7 +71,6 @@ export default function TemporaryDrawer({ darkMode }) {
     <Box
       sx={{
         width: 250,
-        bgcolor: darkMode ? "#1e293b" : "#fff",
         height: "100%",
       }}
       role="presentation"
@@ -53,68 +81,63 @@ export default function TemporaryDrawer({ darkMode }) {
           <ListItemButton
             component={NavLink}
             to="/"
-            sx={{
-              color: darkMode ? "#fff" : "#111827",
-
-              "& .MuiListItemIcon-root": {
-                color: darkMode ? "#60a5fa" : "#2563eb",
-              },
-            }}
           >
             <ListItemIcon>
               <BusinessIcon />
             </ListItemIcon>
-
             <ListItemText primary="HR PORTAL" />
           </ListItemButton>
         </ListItem>
       </List>
 
-      <Divider sx={{ borderColor: darkMode ? "#334155" : "#e5e7eb" }} />
+      <Divider />
 
       <List>
-        {menuItems.map((item) => (
-          <ListItem key={item.text} disablePadding>
-            <ListItemButton
-              component={NavLink}
-              to={item.path}
-              sx={{
-                mx: 1.5,
-                my: 0.5,
-                borderRadius: 2,
+  {menuItems
+    .filter((item) => item.roles.includes(role))
+    .map((item) => (
+      <ListItem key={item.text} disablePadding>
+        <ListItemButton
+          component={NavLink}
+          to={item.path}
+          sx={{
+            mx: 1.5,
+            my: 0.5,
+            borderRadius: 2,
 
-                color: darkMode ? "#fff" : "#111827",
+            color: darkMode ? "#fff" : "#111827",
 
-                "& .MuiListItemIcon-root": {
-                  color: darkMode ? "#fff" : "#111827",
-                  minWidth: 40,
-                },
+            "& .MuiListItemIcon-root": {
+              color: darkMode ? "#fff" : "#111827",
+              minWidth: 40,
+            },
 
-                "&.active": {
-                  backgroundColor: "#2563eb",
-                  color: "#fff",
+            "&.active": {
+              backgroundColor: "#2563eb",
+              color: "#fff",
 
-                  "& .MuiListItemIcon-root": {
-                    color: "#fff",
-                  },
-                },
+              "& .MuiListItemIcon-root": {
+                color: "#fff",
+              },
+            },
 
-                "&:hover": {
-                  backgroundColor: darkMode ? "#334155" : "#eff6ff",
-                },
+            "&:hover": {
+              backgroundColor: darkMode
+                ? "#334155"
+                : "#eff6ff",
+            },
 
-                "&.active:hover": {
-                  backgroundColor: "#2563eb",
-                },
-              }}
-            >
-              <ListItemIcon>{item.icon}</ListItemIcon>
-
-              <ListItemText primary={item.text} />
-            </ListItemButton>
-          </ListItem>
-        ))}
-      </List>
+            "&.active:hover": {
+              backgroundColor: "#2563eb",
+            },
+          }}
+        >
+          <ListItemIcon>{item.icon}</ListItemIcon>
+          <ListItemText primary={item.text} />
+        </ListItemButton>
+      </ListItem>
+    ))}
+</List>
     </Box>
   );
 
@@ -129,11 +152,6 @@ export default function TemporaryDrawer({ darkMode }) {
               top: 9,
               left: open ? 262 : 12,
               zIndex: (theme) => theme.zIndex.drawer + 1,
-
-              bgcolor: darkMode ? "#334155" : "#ffffff",
-              color: darkMode ? "#ffffff" : "#111827",
-
-              boxShadow: 2,
               borderRadius: 1,
               transition: "left .3s ease",
             }}
@@ -148,11 +166,11 @@ export default function TemporaryDrawer({ darkMode }) {
             ModalProps={{
               keepMounted: true,
             }}
-            PaperProps={{
-              sx: {
-                width: 250,
-                backgroundColor: darkMode ? "#1e293b" : "#fff",
-                color: darkMode ? "#fff" : "#111827",
+            slotProps={{
+              paper: {
+                sx: {
+                  width: 250,
+                },
               },
             }}
           >
@@ -162,18 +180,11 @@ export default function TemporaryDrawer({ darkMode }) {
       ) : (
         <Drawer
           variant="permanent"
-          PaperProps={{
-            sx: {
-              width: 250,
-              boxSizing: "border-box",
-
-              backgroundColor: darkMode ? "#1e293b" : "#fff",
-
-              borderRight: darkMode
-                ? "1px solid #334155"
-                : "1px solid #e5e7eb",
-
-              color: darkMode ? "#fff" : "#111827",
+          slotProps={{
+            paper: {
+              sx: {
+                width: 250,
+              },
             },
           }}
         >
@@ -183,3 +194,5 @@ export default function TemporaryDrawer({ darkMode }) {
     </>
   );
 }
+
+export default React.memo(TemporaryDrawer)
