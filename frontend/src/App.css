@@ -1,0 +1,319 @@
+/* ======================================================
+   DARK THEME - HR PORTAL
+====================================================== */
+
+/* ---------- BODY ---------- */
+
+body.dark-theme{
+    background:#0f172a;
+    color:#ffffff;
+}
+
+/* ---------- MAIN CONTENT ---------- */
+
+body.dark-theme .dashboard{
+    background:#0f172a;
+}
+
+body.dark-theme .dashboard-header h3{
+    color:#ffffff;
+}
+
+body.dark-theme .welcome{
+    color:#cbd5e1;
+}
+
+/* ---------- NAVBAR ---------- */
+
+body.dark-theme .MuiAppBar-root{
+    background:#1e293b !important;
+    color:#ffffff !important;
+    border-bottom:1px solid #334155;
+    box-shadow:0 6px 20px rgba(0,0,0,.35);
+}
+
+body.dark-theme .MuiToolbar-root{
+    background:#1e293b;
+}
+
+/* Search */
+
+body.dark-theme .MuiInputBase-root{
+    background:#334155;
+    color:#ffffff;
+    border-radius:8px;
+}
+
+body.dark-theme .MuiInputBase-input{
+    color:#ffffff;
+}
+
+body.dark-theme .MuiInputBase-input::placeholder{
+    color:#cbd5e1;
+    opacity:1;
+}
+
+body.dark-theme .MuiSvgIcon-root{
+    color:#cbd5e1;
+}
+
+/* ---------- SIDEBAR ---------- */
+
+body.dark-theme .MuiDrawer-paper{
+    background:#1e293b !important;
+    color:#ffffff;
+    border-right:1px solid #334155;
+}
+
+body.dark-theme .MuiListItemButton-root{
+    color:#cbd5e1;
+    border-radius:10px;
+}
+
+body.dark-theme .MuiListItemButton-root:hover{
+    background:#334155;
+}
+
+body.dark-theme .MuiListItemIcon-root{
+    color:#cbd5e1;
+}
+
+body.dark-theme .MuiListItemButton-root.active{
+    background:#2563eb !important;
+    color:#ffffff;
+}
+
+body.dark-theme .MuiListItemButton-root.active .MuiListItemIcon-root{
+    color:#ffffff;
+}
+
+body.dark-theme .MuiDivider-root{
+    border-color:#334155;
+}
+
+/* ---------- CARDS ---------- */
+
+body.dark-theme .stat-card,
+body.dark-theme .chart-card,
+body.dark-theme .bottom-card{
+    background:#1e293b;
+    border:1px solid #334155;
+    box-shadow:0 10px 25px rgba(0,0,0,.35);
+}
+
+/* ---------- CARD TEXT ---------- */
+
+body.dark-theme .card-info h4{
+    color:#cbd5e1;
+}
+
+body.dark-theme .card-info h2{
+    color:#ffffff;
+}
+
+body.dark-theme .card-info p{
+    color:#94a3b8;
+}
+
+/* ---------- CARD HEADERS ---------- */
+
+body.dark-theme .chart-card h3,
+body.dark-theme .card-header h3{
+    color:#ffffff;
+}
+
+body.dark-theme .card-header span{
+    color:#60a5fa;
+}
+
+/* ---------- EMPLOYEE LIST ---------- */
+
+body.dark-theme .employee-item{
+    border-bottom:1px solid #334155;
+}
+
+body.dark-theme .employee-left h4{
+    color:#ffffff;
+}
+
+body.dark-theme .employee-left p{
+    color:#cbd5e1;
+}
+
+body.dark-theme .employee-item small{
+    color:#94a3b8;
+}
+
+/* ---------- LEAVE SUMMARY ---------- */
+
+body.dark-theme .leave-item{
+    border-bottom:1px solid #334155;
+}
+
+body.dark-theme .leave-item,
+body.dark-theme .leave-item strong,
+body.dark-theme .leave-item div{
+    color:#ffffff;
+}
+
+/* ---------- BIRTHDAY ---------- */
+
+body.dark-theme .birthday-right{
+    color:#ffffff;
+}
+
+body.dark-theme .gift{
+    color:#fbbf24;
+}
+
+/* ---------- TABLE ---------- */
+
+body.dark-theme table{
+    background:#1e293b;
+    color:#ffffff;
+}
+
+body.dark-theme th{
+    background:#334155;
+    color:#ffffff;
+}
+
+body.dark-theme td{
+    border-bottom:1px solid #334155;
+    color:#cbd5e1;
+}
+
+body.dark-theme tr:hover{
+    background:#243447;
+}
+
+/* ---------- INPUT ---------- */
+
+body.dark-theme input,
+body.dark-theme textarea,
+body.dark-theme select{
+    background:#334155;
+    color:#ffffff;
+    border:1px solid #475569;
+}
+
+body.dark-theme input::placeholder,
+body.dark-theme textarea::placeholder{
+    color:#94a3b8;
+}
+
+body.dark-theme input:focus,
+body.dark-theme textarea:focus,
+body.dark-theme select:focus{
+    border-color:#60a5fa;
+    outline:none;
+}
+
+/* ---------- BUTTON ---------- */
+
+body.dark-theme button{
+    color:#ffffff;
+}
+
+body.dark-theme .MuiButton-contained{
+    background:#2563eb;
+}
+
+body.dark-theme .MuiButton-contained:hover{
+    background:#1d4ed8;
+}
+
+/* ---------- MENU ---------- */
+
+body.dark-theme .MuiMenu-paper{
+    background:#1e293b;
+    color:#ffffff;
+}
+
+body.dark-theme .MuiMenuItem-root:hover{
+    background:#334155;
+}
+
+/* ---------- DIALOG ---------- */
+
+body.dark-theme .MuiDialog-paper{
+    background:#1e293b;
+    color:#ffffff;
+}
+
+/* ---------- CHIP ---------- */
+
+body.dark-theme .MuiChip-root{
+    background:#334155;
+    color:#ffffff;
+}
+
+/* ---------- BADGE ---------- */
+
+body.dark-theme .MuiBadge-badge{
+    background:#ef4444;
+    color:#ffffff;
+}
+
+/* ---------- CHART ---------- */
+
+body.dark-theme .recharts-cartesian-grid line{
+    stroke:#334155;
+}
+
+body.dark-theme .recharts-text{
+    fill:#cbd5e1;
+}
+
+/* ---------- SCROLLBAR ---------- */
+
+body.dark-theme ::-webkit-scrollbar{
+    width:8px;
+    height:8px;
+}
+
+body.dark-theme ::-webkit-scrollbar-track{
+    background:#1e293b;
+}
+
+body.dark-theme ::-webkit-scrollbar-thumb{
+    background:#475569;
+    border-radius:10px;
+}
+
+body.dark-theme ::-webkit-scrollbar-thumb:hover{
+    background:#64748b;
+}
+
+/* ---------- LINKS ---------- */
+
+body.dark-theme a{
+    color:#60a5fa;
+}
+
+body.dark-theme a:hover{
+    color:#93c5fd;
+}
+
+/* ---------- ICON BUTTON ---------- */
+
+body.dark-theme .MuiIconButton-root{
+    color:#cbd5e1;
+}
+
+body.dark-theme .MuiIconButton-root:hover{
+    background:#334155;
+}
+
+/* ---------- PAPER ---------- */
+
+body.dark-theme .MuiPaper-root{
+    background:#1e293b;
+    color:#ffffff;
+}
+
+/* ---------- BORDER ---------- */
+
+body.dark-theme hr{
+    border-color:#334155;
+}
