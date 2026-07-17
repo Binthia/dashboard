@@ -1,33 +1,58 @@
-import { createSlice } from "@reduxjs/toolkit";
-import { departmentRows as departmentData }  from "../../data/departmentData";
+import { createSlice,createAsyncThunk } from "@reduxjs/toolkit";
 
-console.log("Department Data:", departmentData);
-console.log("Length:", departmentData.length);
+export const fetchDepartments = createAsyncThunk(
+  "departments/fetchDepartments",
+  async () => {
+    const response = await fetch("http://localhost:8080/departments");
+    const data = await response.json();
+    console.log("data=",data);    
+    return data;
+  }
+);
 
 const initialState = {
-  departments: departmentData,
+  departments: [],
 };
 
-const departmentSlice = createSlice({
+const DepartmentSlice = createSlice({
   name: "department",
   initialState,
-
   reducers: {
     addDepartment: (state, action) => {
       state.departments.push(action.payload);
     },
 
+    editDepartment: (state, action) => {
+      const index = state.departments.findIndex(
+        dept => dept.id === action.payload.id
+      );
+
+      if (index !== -1) {
+        state.departments[index] = action.payload;
+      }
+    },
+
     deleteDepartment: (state, action) => {
       state.departments = state.departments.filter(
-        (dept) => dept.id !== action.payload
+        dept => dept.id !== action.payload
       );
     },
+    
   },
+
+  
+extraReducers: (builder) => {
+  builder.addCase(fetchDepartments.fulfilled, (state, action) => {
+    state.departments = action.payload;
+  });
+},
+
 });
 
 export const {
   addDepartment,
+  editDepartment,
   deleteDepartment,
-} = departmentSlice.actions;
+} = DepartmentSlice.actions;
 
-export default departmentSlice.reducer;
+export default DepartmentSlice.reducer;
