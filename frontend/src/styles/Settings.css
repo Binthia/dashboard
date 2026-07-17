@@ -1,1 +1,213 @@
+/* ===========================
+   SETTINGS PAGE
+=========================== */
 
+.settings {
+    margin-left: 250px;
+    margin-top: 50px;
+    padding: 25px;
+    min-height: calc(100vh - 70px);
+    background: #f8fafc;
+}
+
+.settings h2 {
+    margin-bottom: 25px;
+    color: #1e293b;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+/* ===========================
+   GRID
+=========================== */
+
+.settings-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 24px;
+}
+
+/* ===========================
+   CARD
+=========================== */
+
+.settings-card {
+    border-radius: 16px !important;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 8px 20px rgba(15, 23, 42, 0.06) !important;
+    transition: .3s ease;
+}
+
+.settings-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 14px 30px rgba(15, 23, 42, 0.12) !important;
+}
+
+.settings-card .MuiCardContent-root {
+    padding: 25px !important;
+}
+
+.settings-card h3 {
+    margin-bottom: 18px;
+    color: #1e293b;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.settings-card p {
+    margin: 12px 0;
+    color: #475569;
+    font-size: 15px;
+}
+
+/* ===========================
+   SWITCHES
+=========================== */
+
+.MuiFormControlLabel-root {
+    display: block !important;
+    margin: 12px 0 !important;
+}
+
+/* ===========================
+   BUTTONS
+=========================== */
+
+.settings-card .MuiButton-root {
+    margin-top: 15px;
+    text-transform: none;
+    font-weight: 600;
+    border-radius: 8px;
+}
+
+.settings > .MuiButton-root {
+    margin-top: 30px;
+    padding: 10px 28px;
+    border-radius: 8px;
+    text-transform: none;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media (max-width: 992px) {
+    .settings {
+        margin-left: 0;
+        padding: 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    .settings {
+        padding: 15px;
+    }
+
+    .settings h2 {
+        font-size: 24px;
+    }
+
+    .settings-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ==========================================
+   SETTINGS DARK MODE
+========================================== */
+
+body.dark-theme .settings,
+.dark-theme .settings{
+    background:#0f172a;
+    color:#ffffff;
+}
+
+/* Heading */
+
+body.dark-theme .settings h2,
+.dark-theme .settings h2{
+    color:#ffffff;
+}
+
+/* Cards */
+
+body.dark-theme .settings-card,
+.dark-theme .settings-card{
+    background:#1e293b !important;
+    border:1px solid #334155 !important;
+    box-shadow:0 10px 25px rgba(0,0,0,.35);
+}
+
+/* Card Titles */
+
+body.dark-theme .settings-card h3,
+.dark-theme .settings-card h3{
+    color:#ffffff;
+}
+
+/* Paragraphs */
+
+body.dark-theme .settings-card p,
+.dark-theme .settings-card p{
+    color:#cbd5e1;
+}
+
+/* Switch Labels */
+
+body.dark-theme .MuiFormControlLabel-label,
+.dark-theme .MuiFormControlLabel-label{
+    color:#ffffff !important;
+}
+
+/* Switch */
+
+body.dark-theme .MuiSwitch-track,
+.dark-theme .MuiSwitch-track{
+    background:#475569 !important;
+}
+
+body.dark-theme .Mui-checked + .MuiSwitch-track,
+.dark-theme .Mui-checked + .MuiSwitch-track{
+    background:#2563eb !important;
+}
+
+/* Divider */
+
+body.dark-theme .MuiDivider-root,
+.dark-theme .MuiDivider-root{
+    border-color:#334155;
+}
+
+/* Buttons */
+
+body.dark-theme .MuiButton-contained,
+.dark-theme .MuiButton-contained{
+    background:#2563eb;
+    color:#ffffff;
+}
+
+body.dark-theme .MuiButton-contained:hover,
+.dark-theme .MuiButton-contained:hover{
+    background:#1d4ed8;
+}
+
+body.dark-theme .MuiButton-outlined,
+.dark-theme .MuiButton-outlined{
+    color:#60a5fa;
+    border-color:#60a5fa;
+}
+
+body.dark-theme .MuiButton-outlined:hover,
+.dark-theme .MuiButton-outlined:hover{
+    background:#1e3a8a;
+    border-color:#60a5fa;
+}
+
+/* MUI Card Content */
+
+body.dark-theme .MuiCardContent-root,
+.dark-theme .MuiCardContent-root{
+    color:#ffffff;
+}
