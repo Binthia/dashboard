@@ -1,0 +1,10 @@
+.department-page{
+    margin-top: 50px;
+    margin-left: 250px;
+}
+
+@media (max-width:600px){
+    .department-page{
+        margin-left:0;
+    }
+}
