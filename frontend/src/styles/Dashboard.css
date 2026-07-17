@@ -1,0 +1,825 @@
+.dashboard{
+    margin-left:250px;
+    margin-top:50px;
+    width:calc(100% - 250px);
+    min-height:calc(100vh - 70px);
+    padding:20px;
+    background:#f6f8fc;
+    box-sizing:border-box;
+    overflow-x:hidden;
+}
+
+.dashboard-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:20px;
+    flex-wrap:wrap;
+    gap:10px;
+}
+
+.dashboard-header h3{
+    margin:0;
+    font-size:30px;
+    font-weight:700;
+    color:#1e293b;
+}
+
+.welcome{
+    margin-top:4px;
+    font-size:16px;
+    color:#64748b;
+}
+
+/* =========================
+   Statistics Cards
+========================= */
+
+.stats-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:18px;
+    margin-bottom:20px;
+}
+
+.stat-card{
+    background:#fff;
+    border-radius:18px;
+    padding:18px;
+    display:flex;
+    align-items:center;
+    gap:15px;
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+    transition:.3s ease;
+}
+
+.stat-card:hover{
+    transform:translateY(-5px);
+}
+
+.circle{
+    width:55px;
+    height:55px;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-shrink:0;
+    color:#fff;
+}
+
+.circle svg{
+    font-size:26px;
+}
+
+.card-info{
+    flex:1;
+}
+
+.card-info h4{
+    margin:0;
+    font-size:14px;
+    color:#64748b;
+    font-weight:500;
+}
+
+.card-info h2{
+    margin:8px 0 4px;
+    font-size:26px;
+    font-weight:700;
+    color:#1e293b;
+}
+
+.card-info p{
+    margin:0;
+    font-size:13px;
+    color:#94a3b8;
+}
+
+/* =========================
+   Dashboard Layout
+========================= */
+
+.dashboard-top{
+    display:grid;
+    grid-template-columns:2fr 1fr;
+    gap:20px;
+    margin-bottom:20px;
+}
+
+.dashboard-bottom{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+/* =========================
+   Common Cards
+========================= */
+
+.chart-card,
+.bottom-card{
+    background:#fff;
+    border-radius:18px;
+    padding:18px;
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+    overflow:hidden;
+}
+
+.chart-card h3,
+.card-header h3{
+    margin:0;
+    font-size:18px;
+    font-weight:600;
+    color:#1e293b;
+}
+
+.card-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:18px;
+}
+
+.card-header span{
+    color:#2563eb;
+    font-size:14px;
+    font-weight:500;
+    cursor:pointer;
+}
+
+/* =========================
+   Charts
+========================= */
+
+.chart-content{
+    width:100%;
+    height:320px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.employee-chart,
+.department-chart{
+    width:100%;
+    height:100%;
+}
+
+.employee-card{
+    min-height:360px;
+}
+
+.department-chart{
+    min-height:280px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+/* ==========================================
+   EMPLOYEE LIST
+========================================== */
+
+.employee-item{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:15px;
+    padding:14px 0;
+    border-bottom:1px solid #ececec;
+}
+
+.employee-item:last-child{
+    border-bottom:none;
+}
+
+.employee-left{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    flex:1;
+    min-width:0;
+}
+
+.employee-left img{
+    width:45px;
+    height:45px;
+    border-radius:50%;
+    object-fit:cover;
+    flex-shrink:0;
+}
+
+.employee-left div{
+    min-width:0;
+}
+
+.employee-left h4{
+    margin:0;
+    font-size:15px;
+    font-weight:600;
+    color:#1e293b;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+}
+
+.employee-left p{
+    margin:3px 0 0;
+    font-size:13px;
+    color:#64748b;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+}
+
+.employee-item small{
+    color:#94a3b8;
+    font-size:12px;
+    white-space:nowrap;
+}
+
+/* ==========================================
+   LEAVE SUMMARY
+========================================== */
+
+.leave-item{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:14px 0;
+    border-bottom:1px solid #ececec;
+}
+
+.leave-item:last-child{
+    border-bottom:none;
+}
+
+.leave-item div{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.leave-item strong{
+    color:#1e293b;
+    font-size:15px;
+}
+
+.leave-item span{
+    width:10px;
+    height:10px;
+    border-radius:50%;
+    display:inline-block;
+}
+
+.green{
+    background:#22c55e;
+}
+
+.orange{
+    background:#f59e0b;
+}
+
+.red{
+    background:#ef4444;
+}
+
+.blue{
+    background:#2563eb;
+}
+
+.total{
+    font-weight:600;
+}
+
+/* ==========================================
+   UPCOMING BIRTHDAY
+========================================== */
+
+.birthday-right{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    flex-shrink:0;
+}
+
+.birthday-right small{
+    color:#64748b;
+}
+
+.gift{
+    font-size:20px;
+}
+
+/* ==========================================
+   SMALL UTILITIES
+========================================== */
+
+img{
+    max-width:100%;
+    display:block;
+}
+
+svg{
+    display:block;
+}
+
+/* ==========================================
+   DARK THEME
+========================================== */
+
+body.dark-theme .dashboard{
+    background:#0f172a;
+}
+
+body.dark-theme .dashboard-header h3{
+    color:#ffffff;
+}
+
+body.dark-theme .welcome{
+    color:#cbd5e1;
+}
+
+/* Cards */
+
+body.dark-theme .stat-card,
+body.dark-theme .chart-card,
+body.dark-theme .bottom-card{
+    background:#1e293b;
+    border:1px solid #334155;
+    box-shadow:0 10px 25px rgba(0,0,0,.35);
+}
+
+/* Statistics */
+
+body.dark-theme .card-info h4{
+    color:#cbd5e1;
+}
+
+body.dark-theme .card-info h2{
+    color:#ffffff;
+}
+
+body.dark-theme .card-info p{
+    color:#94a3b8;
+}
+
+/* Headings */
+
+body.dark-theme .chart-card h3,
+body.dark-theme .card-header h3{
+    color:#ffffff;
+}
+
+body.dark-theme .card-header span{
+    color:#60a5fa;
+}
+
+/* Employee List */
+
+body.dark-theme .employee-item{
+    border-bottom:1px solid #334155;
+}
+
+body.dark-theme .employee-left h4{
+    color:#ffffff;
+}
+
+body.dark-theme .employee-left p{
+    color:#cbd5e1;
+}
+
+body.dark-theme .employee-item small{
+    color:#94a3b8;
+}
+
+/* Leave Summary */
+
+body.dark-theme .leave-item{
+    border-bottom:1px solid #334155;
+}
+
+body.dark-theme .leave-item,
+body.dark-theme .leave-item strong,
+body.dark-theme .leave-item div{
+    color:#ffffff;
+}
+
+/* Birthday */
+
+body.dark-theme .birthday-right{
+    color:#ffffff;
+}
+
+body.dark-theme .gift{
+    color:#fbbf24;
+}
+
+/* ==========================================
+   RECHARTS
+========================================== */
+
+body.dark-theme .recharts-text{
+    fill:#ffffff !important;
+}
+
+body.dark-theme .recharts-cartesian-axis-line,
+body.dark-theme .recharts-cartesian-grid line{
+    stroke:#475569 !important;
+}
+
+body.dark-theme .recharts-cartesian-axis-tick-value{
+    fill:#ffffff !important;
+}
+
+body.dark-theme .recharts-label{
+    fill:#ffffff !important;
+}
+
+body.dark-theme .recharts-legend-item-text{
+    fill:#ffffff !important;
+}
+
+body.dark-theme .recharts-tooltip-wrapper{
+    color:#000;
+}
+
+/* ==========================================
+   SCROLLBAR
+========================================== */
+
+body.dark-theme ::-webkit-scrollbar{
+    width:8px;
+    height:8px;
+}
+
+body.dark-theme ::-webkit-scrollbar-track{
+    background:#111827;
+}
+
+body.dark-theme ::-webkit-scrollbar-thumb{
+    background:#475569;
+    border-radius:20px;
+}
+
+body.dark-theme ::-webkit-scrollbar-thumb:hover{
+    background:#64748b;
+}
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+/* Large Laptop */
+@media (max-width:1400px){
+
+    .stats-grid{
+        grid-template-columns:repeat(3,1fr);
+    }
+
+    .dashboard-top{
+        grid-template-columns:2fr 1fr;
+    }
+
+    .dashboard-bottom{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+
+
+/* Laptop */
+@media (max-width:1200px){
+
+    .dashboard{
+        margin-left:250px;
+        width:calc(100% - 250px);
+        padding:18px;
+    }
+
+    .stats-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .dashboard-top{
+        grid-template-columns:1fr;
+    }
+
+    .dashboard-bottom{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .chart-content{
+        height:300px;
+    }
+}
+
+
+/* Tablet */
+@media (max-width:992px){
+
+    .dashboard{
+        margin-left:250px;
+        width:calc(100% - 250px);
+        padding:18px;
+    }
+
+    .dashboard-header{
+        flex-direction:column;
+        align-items:flex-start;
+    }
+
+    .stats-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .dashboard-top,
+    .dashboard-bottom{
+        grid-template-columns:1fr;
+    }
+
+    .chart-content{
+        height:280px;
+    }
+}
+/* Mobile */
+@media (max-width:768px){
+
+    .dashboard{
+        /* Keep sidebar spacing until 600px */
+        margin-left:250px;
+        width:calc(100% - 250px);
+        margin-top:64px;
+        padding:15px;
+    }
+
+    .dashboard-header h3{
+        font-size:28px;
+    }
+
+    .welcome{
+        font-size:14px;
+    }
+
+    .stats-grid{
+        grid-template-columns:1fr;
+        gap:15px;
+    }
+
+    .stat-card{
+        padding:16px;
+    }
+
+    .dashboard-top,
+    .dashboard-bottom{
+        grid-template-columns:1fr;
+        gap:15px;
+    }
+
+    .chart-card,
+    .bottom-card{
+        padding:15px;
+    }
+
+    .chart-content{
+        height:260px;
+    }
+
+    .employee-item{
+        flex-wrap:wrap;
+        gap:10px;
+    }
+
+    .birthday-right{
+        width:100%;
+        justify-content:flex-end;
+    }
+}
+
+@media (max-width:600px){
+
+    .dashboard{
+        margin-left:0;
+        width:100%;
+        margin-top:64px;
+        padding:15px;
+    }
+}
+
+
+/* --------------- */
+.employee-chart-container{
+    width:100%;
+    height:350px;
+}
+
+.employee-chart-container .recharts-responsive-container{
+    width:100% !important;
+    height:100% !important;
+}
+
+@media (max-width:992px){
+    .employee-chart-container{
+        height:300px;
+    }
+}
+
+@media (max-width:768px){
+    .employee-chart-container{
+        height:250px;
+    }
+}
+
+@media (max-width:480px){
+    .employee-chart-container{
+        height:220px;
+    }
+}
+
+/* ==========================================
+   DASHBOARD - DARK MODE
+========================================== */
+
+/* Dashboard Background */
+body.dark-theme .dashboard,
+.dark-theme .dashboard {
+    background: #0f172a;
+    color: #ffffff;
+}
+
+/* Header */
+body.dark-theme .dashboard-header h3,
+.dark-theme .dashboard-header h3 {
+    color: #ffffff;
+}
+
+body.dark-theme .welcome,
+.dark-theme .welcome {
+    color: #cbd5e1;
+}
+
+body.dark-theme .welcome strong,
+.dark-theme .welcome strong {
+    color: #ffffff;
+}
+
+/* ==========================================
+   Cards
+========================================== */
+
+body.dark-theme .stat-card,
+body.dark-theme .chart-card,
+body.dark-theme .bottom-card,
+.dark-theme .stat-card,
+.dark-theme .chart-card,
+.dark-theme .bottom-card {
+    background: #1e293b;
+    border: 1px solid #334155;
+    box-shadow: 0 10px 25px rgba(0,0,0,.35);
+}
+
+/* Statistics */
+
+body.dark-theme .card-info h4,
+.dark-theme .card-info h4 {
+    color: #cbd5e1;
+}
+
+body.dark-theme .card-info h2,
+.dark-theme .card-info h2 {
+    color: #ffffff;
+}
+
+body.dark-theme .card-info p,
+.dark-theme .card-info p {
+    color: #94a3b8;
+}
+
+/* ==========================================
+   Chart Section
+========================================== */
+
+body.dark-theme .chart-card h3,
+.dark-theme .chart-card h3 {
+    color: #ffffff;
+}
+
+body.dark-theme .chart-content,
+.dark-theme .chart-content {
+    color: #ffffff;
+}
+
+/* ==========================================
+   Card Header
+========================================== */
+
+body.dark-theme .card-header h3,
+.dark-theme .card-header h3 {
+    color: #ffffff;
+}
+
+body.dark-theme .card-header span,
+.dark-theme .card-header span {
+    color: #60a5fa;
+}
+
+/* ==========================================
+   Recent Employees
+========================================== */
+
+body.dark-theme .employee-item,
+.dark-theme .employee-item {
+    border-bottom: 1px solid #334155;
+}
+
+body.dark-theme .employee-left h4,
+.dark-theme .employee-left h4 {
+    color: #ffffff;
+}
+
+body.dark-theme .employee-left p,
+.dark-theme .employee-left p {
+    color: #cbd5e1;
+}
+
+body.dark-theme .employee-item small,
+.dark-theme .employee-item small {
+    color: #94a3b8;
+}
+
+/* ==========================================
+   Leave Summary
+========================================== */
+
+body.dark-theme .leave-item,
+.dark-theme .leave-item {
+    border-bottom: 1px solid #334155;
+    color: #ffffff;
+}
+
+body.dark-theme .leave-item div,
+.dark-theme .leave-item div {
+    color: #ffffff;
+}
+
+body.dark-theme .leave-item strong,
+.dark-theme .leave-item strong {
+    color: #ffffff;
+}
+
+body.dark-theme .leave-item.total,
+.dark-theme .leave-item.total {
+    border-top: 1px solid #334155;
+}
+
+/* ==========================================
+   Birthday Section
+========================================== */
+
+body.dark-theme .birthday-right,
+.dark-theme .birthday-right {
+    color: #ffffff;
+}
+
+body.dark-theme .birthday-right small,
+.dark-theme .birthday-right small {
+    color: #94a3b8;
+}
+
+body.dark-theme .gift,
+.dark-theme .gift {
+    color: #fbbf24;
+}
+
+/* ==========================================
+   Images
+========================================== */
+
+body.dark-theme .employee-left img,
+.dark-theme .employee-left img {
+    border: 2px solid #334155;
+}
+
+/* ==========================================
+   Scrollbar
+========================================== */
+
+body.dark-theme ::-webkit-scrollbar,
+.dark-theme ::-webkit-scrollbar {
+    width: 8px;
+}
+
+body.dark-theme ::-webkit-scrollbar-track,
+.dark-theme ::-webkit-scrollbar-track {
+    background: #0f172a;
+}
+
+body.dark-theme ::-webkit-scrollbar-thumb,
+.dark-theme ::-webkit-scrollbar-thumb {
+    background: #475569;
+    border-radius: 10px;
+}
+
+body.dark-theme ::-webkit-scrollbar-thumb:hover,
+.dark-theme ::-webkit-scrollbar-thumb:hover {
+    background: #64748b;
+}
