@@ -1,0 +1,11 @@
+.employee-page{
+    margin-top: 50px;
+    margin-left: 250px;
+}
+
+@media (max-width:600px){
+    .employee-page{
+        margin-left:0;
+    }
+}
+
