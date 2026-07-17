@@ -15,7 +15,7 @@ const DepartmentChart = lazy(
   () => import("../components/chart/DepartmentChart"),
 );
 
-function Dashboard({ collapsed }) {
+function Dashboard() {
   const employees = useSelector((state) => state.employee.employees);
   const departments = useSelector((state) => state.department.departments);
 
@@ -59,53 +59,17 @@ function Dashboard({ collapsed }) {
   ];
 
   const recentEmployees = [
-    {
-      name: "Sarah Johnson",
-      role: "UI/UX Designer",
-      date: "May 06, 2024",
-      // image: "https://i.pravatar.cc/40?img=1",
-    },
-    {
-      name: "Michael Brown",
-      role: "Frontend Developer",
-      date: "May 05, 2024",
-      // image: "https://i.pravatar.cc/40?img=2",
-    },
-    {
-      name: "Emily Davis",
-      role: "HR Executive",
-      date: "May 04, 2024",
-      // image: "https://i.pravatar.cc/40?img=3",
-    },
-    {
-      name: "David Wilson",
-      role: "Backend Developer",
-      date: "May 03, 2024",
-      // image: "https://i.pravatar.cc/40?img=4",
-    },
+    { name: "Sarah Johnson", role: "UI/UX Designer", date: "May 06, 2024" },
+    { name: "Michael Brown", role: "Frontend Developer", date: "May 05, 2024" },
+    { name: "Emily Davis", role: "HR Executive", date: "May 04, 2024" },
+    { name: "David Wilson", role: "Backend Developer", date: "May 03, 2024" },
   ];
 
   const birthdays = [
-    {
-      name: "Olivia Taylor",
-      date: "May 10",
-      // image: "https://i.pravatar.cc/40?img=5",
-    },
-    {
-      name: "James Anderson",
-      date: "May 12",
-      // image: "https://i.pravatar.cc/40?img=6",
-    },
-    {
-      name: "Sophia Martinez",
-      date: "May 15",
-      // image: "https://i.pravatar.cc/40?img=7",
-    },
-    {
-      name: "Daniel Thomas",
-      date: "May 18",
-      // image: "https://i.pravatar.cc/40?img=8",
-    },
+    { name: "Olivia Taylor", date: "May 10" },
+    { name: "James Anderson", date: "May 12" },
+    { name: "Sophia Martinez", date: "May 15" },
+    { name: "Daniel Thomas", date: "May 18" },
   ];
 
   const dashboardCards = useMemo(
@@ -125,10 +89,10 @@ function Dashboard({ collapsed }) {
   const dispatch = useDispatch();
 
   useEffect(() => {
-  if (!departments.length) {
-    dispatch(fetchDepartments());
-  }
-}, [dispatch, departments.length]);
+    if (!departments.length) {
+      dispatch(fetchDepartments());
+    }
+  }, [dispatch, departments.length]);
 
   return (
     <div className="dashboard">
@@ -180,12 +144,7 @@ function Dashboard({ collapsed }) {
           {recentEmployees.map((emp) => (
             <div className="employee-item" key={emp.name}>
               <div className="employee-left">
-                <Avatar
-                  name={emp.name}
-                  size="40"
-                  round={true}
-                  color="#1976d2"
-                />
+                <Avatar name={emp.name} size="40" round={true} color="#1976d2" />
 
                 <div>
                   <h4>{emp.name}</h4>
@@ -248,12 +207,7 @@ function Dashboard({ collapsed }) {
           {birthdays.map((emp) => (
             <div className="employee-item" key={emp.name}>
               <div className="employee-left">
-                <Avatar
-                  name={emp.name}
-                  size="40"
-                  round={true}
-                  color="#ec4899"
-                />
+                <Avatar name={emp.name} size="40" round={true} color="#ec4899" />
 
                 <div>
                   <h4>{emp.name}</h4>
