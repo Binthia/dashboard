@@ -77,7 +77,7 @@ const StyledInputBase = styled(InputBase, {
   },
 }));
 
-export default function PrimarySearchAppBar({
+function PrimarySearchAppBar({
   darkMode,
   setDarkMode,
 }) {
@@ -294,3 +294,5 @@ export default function PrimarySearchAppBar({
     </Box>
   );
 }
+
+export default React.memo(PrimarySearchAppBar)
