@@ -1,7 +1,3 @@
-/* ===========================
-   PROFILE PAGE
-=========================== */
-
 .profile {
   margin-left: 250px;
   margin-top: 50px;
@@ -12,20 +8,12 @@
   box-sizing: border-box;
 }
 
-/* ===========================
-   MAIN GRID
-=========================== */
-
 .profile-grid {
   display: grid;
   grid-template-columns: 320px 1fr;
   gap: 24px;
   align-items: start;
 }
-
-/* ===========================
-   LEFT PROFILE CARD
-=========================== */
 
 .profile-card {
   border-radius: 18px !important;
@@ -37,16 +25,6 @@
 .profile-card .MuiCardContent-root {
   padding: 35px !important;
   text-align: center;
-}
-
-.profile-image {
-    display: block;
-    width: 100px;
-    height: 100px;
-    object-fit: cover;
-    border-radius: 50%;
-    border: 5px solid #2563eb;
-    margin: 0 auto 20px;
 }
 
 .profile-card h2 {
@@ -111,10 +89,6 @@
   background: #e2e8f0;
 }
 
-/* ===========================
-   RIGHT SIDE
-=========================== */
-
 .details-container {
   display: flex;
   flex-direction: column;
@@ -136,10 +110,6 @@
   font-size: 22px;
   font-weight: 700;
 }
-
-/* ===========================
-   DETAILS GRID
-=========================== */
 
 .details-grid {
   display: grid;
@@ -181,19 +151,11 @@
   font-weight: 600;
 }
 
-/* ===========================
-   BOTTOM GRID
-=========================== */
-
 .bottom-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 24px;
 }
-
-/* ===========================
-   COMPANY TABLE
-=========================== */
 
 .company-table {
   width: 100%;
@@ -224,10 +186,6 @@
   font-weight: 600;
 }
 
-/* ===========================
-   SKILLS
-=========================== */
-
 .skill {
   margin-bottom: 22px;
 }
@@ -254,24 +212,13 @@
   border-radius: 8px;
 }
 
-/* ===========================
-   LARGE LAPTOP
-=========================== */
-
 @media (max-width: 1200px) {
-
   .profile-grid {
     grid-template-columns: 280px 1fr;
   }
-
 }
 
-/* ===========================
-   TABLET
-=========================== */
-
 @media (max-width: 992px) {
-
   .profile {
     padding: 20px;
   }
@@ -291,22 +238,11 @@
   .bottom-grid {
     grid-template-columns: 1fr;
   }
-
 }
 
-/* ===========================
-   MOBILE
-=========================== */
-
 @media (max-width: 768px) {
-
   .profile {
     padding: 15px;
-  }
-
-  .profile-image {
-    width: 130px;
-    height: 130px;
   }
 
   .profile-card h2 {
@@ -333,22 +269,16 @@
     padding: 12px 0;
     font-size: 14px;
   }
-
 }
 
 @media (max-width: 600px) {
-    .profile {
-        margin-left: 0;
-        padding: 15px;
-    }
+  .profile {
+    margin-left: 0;
+    padding: 15px;
+  }
 }
 
-/* ===========================
-   SMALL MOBILE
-=========================== */
-
 @media (max-width: 480px) {
-
   .profile {
     padding: 12px;
   }
@@ -356,11 +286,6 @@
   .profile-card .MuiCardContent-root,
   .details-card .MuiCardContent-root {
     padding: 20px !important;
-  }
-
-  .profile-image {
-    width: 110px;
-    height: 110px;
   }
 
   .profile-card h2 {
@@ -399,159 +324,94 @@
     display: block;
     padding: 12px 0;
   }
-
-}
-/* =====================================================
-   PROFILE DARK MODE
-===================================================== */
-
-body.dark-theme .profile,
-.dark-theme .profile{
-    background:#0f172a;
 }
 
-/* Profile & Details Cards */
+body.dark-theme .profile {
+  background: #0f172a;
+}
 
 body.dark-theme .profile-card,
-body.dark-theme .details-card,
-.dark-theme .profile-card,
-.dark-theme .details-card{
-    background:#1e293b !important;
-    border:1px solid #334155 !important;
-    box-shadow:0 10px 25px rgba(0,0,0,.35);
-    color:#ffffff;
+body.dark-theme .details-card {
+  background: #1e293b !important;
+  border: 1px solid #334155 !important;
+  box-shadow: 0 10px 25px rgba(0,0,0,.35);
+  color: #ffffff;
 }
-
-/* Headings */
 
 body.dark-theme .profile-card h2,
-body.dark-theme .details-card h3,
-.dark-theme .profile-card h2,
-.dark-theme .details-card h3{
-    color:#ffffff;
+body.dark-theme .details-card h3 {
+  color: #ffffff;
 }
 
-/* Designation */
-
-body.dark-theme .designation,
-.dark-theme .designation{
-    color:#cbd5e1;
+body.dark-theme .designation {
+  color: #cbd5e1;
 }
 
-/* Status */
-
-body.dark-theme .status,
-.dark-theme .status{
-    background:#14532d;
-    color:#86efac;
+body.dark-theme .status {
+  background: #14532d;
+  color: #86efac;
 }
 
-/* =====================================================
-   DETAIL BOXES
-===================================================== */
-
-body.dark-theme .detail-item,
-.dark-theme .detail-item{
-    background:#334155 !important;
-    border:1px solid #475569 !important;
-    border-radius:10px;
+body.dark-theme .detail-item {
+  background: #334155 !important;
+  border: 1px solid #475569 !important;
+  border-radius: 10px;
 }
 
-/* Label */
-
-body.dark-theme .detail-item span,
-.dark-theme .detail-item span{
-    color:#94a3b8 !important;
+body.dark-theme .detail-item span {
+  color: #94a3b8 !important;
 }
 
-/* Value */
-
-body.dark-theme .detail-item h4,
-.dark-theme .detail-item h4{
-    color:#ffffff !important;
+body.dark-theme .detail-item h4 {
+  color: #ffffff !important;
 }
 
-/* Icons */
-
-body.dark-theme .detail-item svg,
-.dark-theme .detail-item svg{
-    color:#60a5fa !important;
+body.dark-theme .detail-item svg {
+  color: #60a5fa !important;
 }
 
-/* =====================================================
-   COMPANY TABLE
-===================================================== */
-
-body.dark-theme .company-table,
-.dark-theme .company-table{
-    color:#ffffff;
+body.dark-theme .company-table {
+  color: #ffffff;
 }
 
-body.dark-theme .company-table tr,
-.dark-theme .company-table tr{
-    border-bottom:1px solid #334155;
+body.dark-theme .company-table tr {
+  border-bottom: 1px solid #334155;
 }
 
-body.dark-theme .company-table td:first-child,
-.dark-theme .company-table td:first-child{
-    color:#94a3b8;
+body.dark-theme .company-table td:first-child {
+  color: #94a3b8;
 }
 
-body.dark-theme .company-table td:last-child,
-.dark-theme .company-table td:last-child{
-    color:#ffffff;
+body.dark-theme .company-table td:last-child {
+  color: #ffffff;
 }
 
-/* =====================================================
-   SKILLS
-===================================================== */
-
-body.dark-theme .skill span,
-.dark-theme .skill span{
-    color:#ffffff;
+body.dark-theme .skill span {
+  color: #ffffff;
 }
 
-body.dark-theme .MuiLinearProgress-root,
-.dark-theme .MuiLinearProgress-root{
-    background:#334155;
+body.dark-theme .MuiLinearProgress-root {
+  background: #334155;
 }
 
-body.dark-theme .MuiLinearProgress-bar,
-.dark-theme .MuiLinearProgress-bar{
-    background:#3b82f6;
+body.dark-theme .MuiLinearProgress-bar {
+  background: #3b82f6;
 }
 
-/* =====================================================
-   BUTTONS
-===================================================== */
-
-body.dark-theme .edit-btn,
-.dark-theme .edit-btn{
-    background:#2563eb;
-    color:#ffffff;
+body.dark-theme .edit-btn {
+  background: #2563eb;
+  color: #ffffff;
 }
 
-body.dark-theme .edit-btn:hover,
-.dark-theme .edit-btn:hover{
-    background:#1d4ed8;
+body.dark-theme .edit-btn:hover {
+  background: #1d4ed8;
 }
 
-body.dark-theme .password-btn,
-.dark-theme .password-btn{
-    background:#475569;
-    color:#ffffff;
+body.dark-theme .password-btn {
+  background: #475569;
+  color: #ffffff;
 }
 
-body.dark-theme .password-btn:hover,
-.dark-theme .password-btn:hover{
-    background:#64748b;
-}
-
-/* =====================================================
-   PROFILE IMAGE
-===================================================== */
-
-body.dark-theme .profile-image,
-.dark-theme .profile-image{
-    border:4px solid #475569;
+body.dark-theme .password-btn:hover {
+  background: #64748b;
 }
