@@ -31,10 +31,6 @@
     color:#64748b;
 }
 
-/* =========================
-   Statistics Cards
-========================= */
-
 .stats-grid{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
@@ -96,10 +92,6 @@
     color:#94a3b8;
 }
 
-/* =========================
-   Dashboard Layout
-========================= */
-
 .dashboard-top{
     display:grid;
     grid-template-columns:2fr 1fr;
@@ -112,10 +104,6 @@
     grid-template-columns:repeat(3,1fr);
     gap:20px;
 }
-
-/* =========================
-   Common Cards
-========================= */
 
 .chart-card,
 .bottom-card{
@@ -148,10 +136,6 @@
     cursor:pointer;
 }
 
-/* =========================
-   Charts
-========================= */
-
 .chart-content{
     width:100%;
     height:320px;
@@ -176,10 +160,6 @@
     justify-content:center;
     align-items:center;
 }
-
-/* ==========================================
-   EMPLOYEE LIST
-========================================== */
 
 .employee-item{
     display:flex;
@@ -239,10 +219,6 @@
     white-space:nowrap;
 }
 
-/* ==========================================
-   LEAVE SUMMARY
-========================================== */
-
 .leave-item{
     display:flex;
     justify-content:space-between;
@@ -293,10 +269,6 @@
     font-weight:600;
 }
 
-/* ==========================================
-   UPCOMING BIRTHDAY
-========================================== */
-
 .birthday-right{
     display:flex;
     align-items:center;
@@ -312,10 +284,6 @@
     font-size:20px;
 }
 
-/* ==========================================
-   SMALL UTILITIES
-========================================== */
-
 img{
     max-width:100%;
     display:block;
@@ -324,151 +292,6 @@ img{
 svg{
     display:block;
 }
-
-/* ==========================================
-   DARK THEME
-========================================== */
-
-body.dark-theme .dashboard{
-    background:#0f172a;
-}
-
-body.dark-theme .dashboard-header h3{
-    color:#ffffff;
-}
-
-body.dark-theme .welcome{
-    color:#cbd5e1;
-}
-
-/* Cards */
-
-body.dark-theme .stat-card,
-body.dark-theme .chart-card,
-body.dark-theme .bottom-card{
-    background:#1e293b;
-    border:1px solid #334155;
-    box-shadow:0 10px 25px rgba(0,0,0,.35);
-}
-
-/* Statistics */
-
-body.dark-theme .card-info h4{
-    color:#cbd5e1;
-}
-
-body.dark-theme .card-info h2{
-    color:#ffffff;
-}
-
-body.dark-theme .card-info p{
-    color:#94a3b8;
-}
-
-/* Headings */
-
-body.dark-theme .chart-card h3,
-body.dark-theme .card-header h3{
-    color:#ffffff;
-}
-
-body.dark-theme .card-header span{
-    color:#60a5fa;
-}
-
-/* Employee List */
-
-body.dark-theme .employee-item{
-    border-bottom:1px solid #334155;
-}
-
-body.dark-theme .employee-left h4{
-    color:#ffffff;
-}
-
-body.dark-theme .employee-left p{
-    color:#cbd5e1;
-}
-
-body.dark-theme .employee-item small{
-    color:#94a3b8;
-}
-
-/* Leave Summary */
-
-body.dark-theme .leave-item{
-    border-bottom:1px solid #334155;
-}
-
-body.dark-theme .leave-item,
-body.dark-theme .leave-item strong,
-body.dark-theme .leave-item div{
-    color:#ffffff;
-}
-
-/* Birthday */
-
-body.dark-theme .birthday-right{
-    color:#ffffff;
-}
-
-body.dark-theme .gift{
-    color:#fbbf24;
-}
-
-/* ==========================================
-   RECHARTS
-========================================== */
-
-body.dark-theme .recharts-text{
-    fill:#ffffff !important;
-}
-
-body.dark-theme .recharts-cartesian-axis-line,
-body.dark-theme .recharts-cartesian-grid line{
-    stroke:#475569 !important;
-}
-
-body.dark-theme .recharts-cartesian-axis-tick-value{
-    fill:#ffffff !important;
-}
-
-body.dark-theme .recharts-label{
-    fill:#ffffff !important;
-}
-
-body.dark-theme .recharts-legend-item-text{
-    fill:#ffffff !important;
-}
-
-body.dark-theme .recharts-tooltip-wrapper{
-    color:#000;
-}
-
-/* ==========================================
-   SCROLLBAR
-========================================== */
-
-body.dark-theme ::-webkit-scrollbar{
-    width:8px;
-    height:8px;
-}
-
-body.dark-theme ::-webkit-scrollbar-track{
-    background:#111827;
-}
-
-body.dark-theme ::-webkit-scrollbar-thumb{
-    background:#475569;
-    border-radius:20px;
-}
-
-body.dark-theme ::-webkit-scrollbar-thumb:hover{
-    background:#64748b;
-}
-/* ==========================================
-   RESPONSIVE
-========================================== */
 
 /* Large Laptop */
 @media (max-width:1400px){
@@ -635,191 +458,160 @@ body.dark-theme ::-webkit-scrollbar-thumb:hover{
     }
 }
 
-/* ==========================================
-   DASHBOARD - DARK MODE
-========================================== */
-
-/* Dashboard Background */
-body.dark-theme .dashboard,
-.dark-theme .dashboard {
-    background: #0f172a;
-    color: #ffffff;
+body.dark-theme .dashboard{
+    background:#0f172a;
+    color:#ffffff;
 }
 
-/* Header */
-body.dark-theme .dashboard-header h3,
-.dark-theme .dashboard-header h3 {
-    color: #ffffff;
+body.dark-theme .dashboard-header h3{
+    color:#ffffff;
 }
 
-body.dark-theme .welcome,
-.dark-theme .welcome {
-    color: #cbd5e1;
+body.dark-theme .welcome{
+    color:#cbd5e1;
 }
 
-body.dark-theme .welcome strong,
-.dark-theme .welcome strong {
-    color: #ffffff;
+body.dark-theme .welcome strong{
+    color:#ffffff;
 }
 
-/* ==========================================
-   Cards
-========================================== */
+/* Cards */
 
 body.dark-theme .stat-card,
 body.dark-theme .chart-card,
-body.dark-theme .bottom-card,
-.dark-theme .stat-card,
-.dark-theme .chart-card,
-.dark-theme .bottom-card {
-    background: #1e293b;
-    border: 1px solid #334155;
-    box-shadow: 0 10px 25px rgba(0,0,0,.35);
+body.dark-theme .bottom-card{
+    background:#1e293b;
+    border:1px solid #334155;
+    box-shadow:0 10px 25px rgba(0,0,0,.35);
 }
 
 /* Statistics */
 
-body.dark-theme .card-info h4,
-.dark-theme .card-info h4 {
-    color: #cbd5e1;
+body.dark-theme .card-info h4{
+    color:#cbd5e1;
 }
 
-body.dark-theme .card-info h2,
-.dark-theme .card-info h2 {
-    color: #ffffff;
+body.dark-theme .card-info h2{
+    color:#ffffff;
 }
 
-body.dark-theme .card-info p,
-.dark-theme .card-info p {
-    color: #94a3b8;
+body.dark-theme .card-info p{
+    color:#94a3b8;
 }
 
-/* ==========================================
-   Chart Section
-========================================== */
+/* Chart section */
 
 body.dark-theme .chart-card h3,
-.dark-theme .chart-card h3 {
-    color: #ffffff;
+body.dark-theme .card-header h3{
+    color:#ffffff;
 }
 
-body.dark-theme .chart-content,
-.dark-theme .chart-content {
-    color: #ffffff;
+body.dark-theme .chart-content{
+    color:#ffffff;
 }
 
-/* ==========================================
-   Card Header
-========================================== */
-
-body.dark-theme .card-header h3,
-.dark-theme .card-header h3 {
-    color: #ffffff;
+body.dark-theme .card-header span{
+    color:#60a5fa;
 }
 
-body.dark-theme .card-header span,
-.dark-theme .card-header span {
-    color: #60a5fa;
+/* Recent Employees */
+
+body.dark-theme .employee-item{
+    border-bottom:1px solid #334155;
 }
 
-/* ==========================================
-   Recent Employees
-========================================== */
-
-body.dark-theme .employee-item,
-.dark-theme .employee-item {
-    border-bottom: 1px solid #334155;
+body.dark-theme .employee-left h4{
+    color:#ffffff;
 }
 
-body.dark-theme .employee-left h4,
-.dark-theme .employee-left h4 {
-    color: #ffffff;
+body.dark-theme .employee-left p{
+    color:#cbd5e1;
 }
 
-body.dark-theme .employee-left p,
-.dark-theme .employee-left p {
-    color: #cbd5e1;
+body.dark-theme .employee-item small{
+    color:#94a3b8;
 }
 
-body.dark-theme .employee-item small,
-.dark-theme .employee-item small {
-    color: #94a3b8;
+body.dark-theme .employee-left img{
+    border:2px solid #334155;
 }
 
-/* ==========================================
-   Leave Summary
-========================================== */
+/* Leave Summary */
 
-body.dark-theme .leave-item,
-.dark-theme .leave-item {
-    border-bottom: 1px solid #334155;
-    color: #ffffff;
+body.dark-theme .leave-item{
+    border-bottom:1px solid #334155;
+    color:#ffffff;
 }
 
-body.dark-theme .leave-item div,
-.dark-theme .leave-item div {
-    color: #ffffff;
+body.dark-theme .leave-item div{
+    color:#ffffff;
 }
 
-body.dark-theme .leave-item strong,
-.dark-theme .leave-item strong {
-    color: #ffffff;
+body.dark-theme .leave-item strong{
+    color:#ffffff;
 }
 
-body.dark-theme .leave-item.total,
-.dark-theme .leave-item.total {
-    border-top: 1px solid #334155;
+body.dark-theme .leave-item.total{
+    border-top:1px solid #334155;
 }
 
-/* ==========================================
-   Birthday Section
-========================================== */
+/* Birthday */
 
-body.dark-theme .birthday-right,
-.dark-theme .birthday-right {
-    color: #ffffff;
+body.dark-theme .birthday-right{
+    color:#ffffff;
 }
 
-body.dark-theme .birthday-right small,
-.dark-theme .birthday-right small {
-    color: #94a3b8;
+body.dark-theme .birthday-right small{
+    color:#94a3b8;
 }
 
-body.dark-theme .gift,
-.dark-theme .gift {
-    color: #fbbf24;
+body.dark-theme .gift{
+    color:#fbbf24;
 }
 
-/* ==========================================
-   Images
-========================================== */
+/* Recharts */
 
-body.dark-theme .employee-left img,
-.dark-theme .employee-left img {
-    border: 2px solid #334155;
+body.dark-theme .recharts-text{
+    fill:#ffffff !important;
 }
 
-/* ==========================================
-   Scrollbar
-========================================== */
-
-body.dark-theme ::-webkit-scrollbar,
-.dark-theme ::-webkit-scrollbar {
-    width: 8px;
+body.dark-theme .recharts-cartesian-axis-line,
+body.dark-theme .recharts-cartesian-grid line{
+    stroke:#475569 !important;
 }
 
-body.dark-theme ::-webkit-scrollbar-track,
-.dark-theme ::-webkit-scrollbar-track {
-    background: #0f172a;
+body.dark-theme .recharts-cartesian-axis-tick-value{
+    fill:#ffffff !important;
 }
 
-body.dark-theme ::-webkit-scrollbar-thumb,
-.dark-theme ::-webkit-scrollbar-thumb {
-    background: #475569;
-    border-radius: 10px;
+body.dark-theme .recharts-label{
+    fill:#ffffff !important;
 }
 
-body.dark-theme ::-webkit-scrollbar-thumb:hover,
-.dark-theme ::-webkit-scrollbar-thumb:hover {
-    background: #64748b;
+body.dark-theme .recharts-legend-item-text{
+    fill:#ffffff !important;
+}
+
+body.dark-theme .recharts-tooltip-wrapper{
+    color:#000;
+}
+
+/* Scrollbar */
+
+body.dark-theme ::-webkit-scrollbar{
+    width:8px;
+    height:8px;
+}
+
+body.dark-theme ::-webkit-scrollbar-track{
+    background:#0f172a;
+}
+
+body.dark-theme ::-webkit-scrollbar-thumb{
+    background:#475569;
+    border-radius:10px;
+}
+
+body.dark-theme ::-webkit-scrollbar-thumb:hover{
+    background:#64748b;
 }
