@@ -18,6 +18,7 @@ import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
 import WorkIcon from "@mui/icons-material/Work";
 import BusinessCenterIcon from "@mui/icons-material/BusinessCenter";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
+import Avatar from "@mui/material/Avatar";
 
 function Profile() {
   return (
@@ -26,12 +27,16 @@ function Profile() {
         {/* Left Profile Card */}
         <Card className="profile-card">
           <CardContent>
-            <img
-              src="https://i.pravatar.cc/200?img=32"
-              alt="Profile"
-              className="profile-image"
-            />
-
+            <Avatar
+              sx={{
+                width: 150,
+                height: 150,
+                bgcolor: "#2563eb",
+                fontSize: 50,
+              }}
+            >
+              B
+            </Avatar>
             <h2>Binthia V H</h2>
             <p className="designation">HR Manager</p>
             <span className="status">Active Employee</span>
