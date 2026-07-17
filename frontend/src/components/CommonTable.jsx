@@ -32,7 +32,7 @@ import {
   addDepartment,
   editDepartment,
   deleteDepartment,
-} from "../redux/slice/departmentSlice";
+} from "../redux/slice/DepartmentSlice";
 
 function descendingComparator(a, b, orderBy) {
   if (b[orderBy] < a[orderBy]) return -1;
@@ -190,7 +190,7 @@ function CommonTable({ columns, rows, title, type }) {
       }),
     );
   }, [rows, filters, columns]);
-  
+
   const visibleRows = React.useMemo(() => {
     return [...filteredRows]
       .sort((a, b) => getComparator(order, orderBy)(a, b))
