@@ -1,4 +1,4 @@
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
@@ -27,6 +27,10 @@ import "./App.css";
 function App() {
   const [darkMode, setDarkMode] = useState(false);
 
+  useEffect(() => {
+    document.body.classList.toggle("dark-theme", darkMode);
+  }, [darkMode]);
+
   const theme = useMemo(
     () =>
       createTheme({
@@ -49,7 +53,7 @@ function App() {
     <ThemeProvider theme={theme}>
       <CssBaseline />
       <BrowserRouter>
-        <div className={darkMode ? "dark-theme" : "light-theme"}>
+        <div>
           <Sidebar darkMode={darkMode} />
           <Navbar darkMode={darkMode} setDarkMode={setDarkMode}/>
           <Suspense fallback={<h2>Loading...</h2>}>
